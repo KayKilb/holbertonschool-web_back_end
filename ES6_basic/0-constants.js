@@ -1,7 +1,17 @@
-import { taskFirst, taskNext } from './0-constants.js';
-
-console.log(`${taskFirst()} ${taskNext()}`);
-
-bob@dylan:~$ 
-bob@dylan:~$ npm run dev 0-main.js 
-I prefer const when I can. But sometimes let is okay
+#!/usr/bin/node
+// modifying it the ES6 way
+export function taskFirst() {
+    const task = 'I prefer const when I can.';
+    return task;
+  }
+  
+  export function getLast() {
+    return ' is okay';
+  }
+  
+  export function taskNext() {
+    let combination = 'But sometimes let';
+    combination += getLast();
+  
+    return combination;
+  }
